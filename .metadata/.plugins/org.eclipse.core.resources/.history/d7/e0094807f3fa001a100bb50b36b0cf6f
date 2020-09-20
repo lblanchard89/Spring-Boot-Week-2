@@ -1,0 +1,6 @@
+package com.promineotech.inventoryManagement.entity;
+
+@Entity
+public class Address {
+
+}

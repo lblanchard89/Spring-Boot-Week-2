@@ -1,0 +1,31 @@
+1600573029494	Encapsulate field 'id'
+1600573039643	Encapsulate field 'street'
+1600573043480	Encapsulate field 'city'
+1600573047747	Encapsulate field 'state'
+1600573052166	Encapsulate field 'zip'
+1600573329621	Encapsulate field 'id'
+1600573333921	Encapsulate field 'firstName'
+1600573337754	Encapsulate field 'lastName'
+1600573341866	Encapsulate field 'address'
+1600573346048	Encapsulate field 'level'
+1600573352779	Encapsulate field 'orders'
+1600573730873	Encapsulate field 'ordered'
+1600573734379	Encapsulate field 'estimatedDelivery'
+1600573738746	Encapsulate field 'delivered'
+1600573744360	Encapsulate field 'invoiceAmount'
+1600573748562	Encapsulate field 'status'
+1600573754587	Encapsulate field 'products'
+1600574019258	Encapsulate field 'id'
+1600574023842	Encapsulate field 'name'
+1600574027887	Encapsulate field 'description'
+1600574031117	Encapsulate field 'price'
+1600574661559	Encapsulate field 'discount'
+1600631629915	Rename source folder 'src/main/properties'
+1600631977827	Delete element
+1600633036898	Delete element
+1600633624335	Delete element
+1600633752436	Delete element
+1600634210296	Delete element
+1600634304226	Delete element
+1600634456359	Delete element
+1600634540084	Delete element

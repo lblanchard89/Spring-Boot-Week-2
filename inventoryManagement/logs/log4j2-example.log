@@ -1,0 +1,1006 @@
+2020-09-20 15:47:28.658  INFO DESKTOP-UU2715V
+			---[           main] c.p.i.App                                : Starting App on DESKTOP-UU2715V with PID 9596 (started by lblan in C:\Users\lblan\Promineo Assignments\Weekly Assignments\Spring Boot Week 2\inventoryManagement)
+2020-09-20 15:47:28.681  INFO DESKTOP-UU2715V
+			---[           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@142269f2: startup date [Sun Sep 20 15:47:28 CDT 2020]; root of context hierarchy
+2020-09-20 15:47:29.027  INFO DESKTOP-UU2715V
+			---[           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2020-09-20 15:47:29.314  INFO DESKTOP-UU2715V
+			---[           main] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 5.1.3.Final
+2020-09-20 15:47:29.321  WARN DESKTOP-UU2715V
+			---[           main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:687)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:967)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:956)
+	at com.promineotech.inventoryManagement.App.main(App.java:13)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:110)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:86)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:41)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:223)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor$Jsr303ValidatorFactory.run(ConfigurationPropertiesBindingPostProcessor.java:384)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.afterPropertiesSet(ConfigurationPropertiesBindingPostProcessor.java:175)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.ValidationException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 24 more
+2020-09-20 15:47:29.322  INFO DESKTOP-UU2715V
+			---[           main] .b.l.ClasspathLoggingApplicationListener : Application failed to start with classpath: unknown
+2020-09-20 15:47:29.322 ERROR DESKTOP-UU2715V
+			---[           main] o.s.b.SpringApplication                  : Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:687)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:967)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:956)
+	at com.promineotech.inventoryManagement.App.main(App.java:13)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:110)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:86)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:41)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:223)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor$Jsr303ValidatorFactory.run(ConfigurationPropertiesBindingPostProcessor.java:384)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.afterPropertiesSet(ConfigurationPropertiesBindingPostProcessor.java:175)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.ValidationException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 24 more
+2020-09-20 15:48:29.367  INFO DESKTOP-UU2715V
+			---[           main] c.p.i.App                                : Starting App on DESKTOP-UU2715V with PID 17212 (started by lblan in C:\Users\lblan\Promineo Assignments\Weekly Assignments\Spring Boot Week 2\inventoryManagement)
+2020-09-20 15:48:29.388  INFO DESKTOP-UU2715V
+			---[           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@142269f2: startup date [Sun Sep 20 15:48:29 CDT 2020]; root of context hierarchy
+2020-09-20 15:48:29.718  INFO DESKTOP-UU2715V
+			---[           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2020-09-20 15:48:30.026  INFO DESKTOP-UU2715V
+			---[           main] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 5.1.3.Final
+2020-09-20 15:48:30.034  WARN DESKTOP-UU2715V
+			---[           main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:687)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:967)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:956)
+	at com.promineotech.inventoryManagement.App.main(App.java:13)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:110)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:86)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:41)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:223)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor$Jsr303ValidatorFactory.run(ConfigurationPropertiesBindingPostProcessor.java:384)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.afterPropertiesSet(ConfigurationPropertiesBindingPostProcessor.java:175)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.ValidationException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 24 more
+2020-09-20 15:48:30.035  INFO DESKTOP-UU2715V
+			---[           main] .b.l.ClasspathLoggingApplicationListener : Application failed to start with classpath: unknown
+2020-09-20 15:48:30.036 ERROR DESKTOP-UU2715V
+			---[           main] o.s.b.SpringApplication                  : Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:687)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:967)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:956)
+	at com.promineotech.inventoryManagement.App.main(App.java:13)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:110)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:86)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:41)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:223)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor$Jsr303ValidatorFactory.run(ConfigurationPropertiesBindingPostProcessor.java:384)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.afterPropertiesSet(ConfigurationPropertiesBindingPostProcessor.java:175)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.ValidationException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 24 more
+2020-09-20 15:49:38.043  INFO DESKTOP-UU2715V
+			---[           main] c.p.i.App                                : Starting App on DESKTOP-UU2715V with PID 3356 (started by lblan in C:\Users\lblan\Promineo Assignments\Weekly Assignments\Spring Boot Week 2\inventoryManagement)
+2020-09-20 15:49:38.064  INFO DESKTOP-UU2715V
+			---[           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@70f59913: startup date [Sun Sep 20 15:49:38 CDT 2020]; root of context hierarchy
+2020-09-20 15:49:38.399  INFO DESKTOP-UU2715V
+			---[           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2020-09-20 15:49:38.720  INFO DESKTOP-UU2715V
+			---[           main] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 5.1.3.Final
+2020-09-20 15:49:38.728  WARN DESKTOP-UU2715V
+			---[           main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:687)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:967)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:956)
+	at com.promineotech.inventoryManagement.App.main(App.java:13)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1017)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:800)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:698)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:621)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:579)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:110)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:86)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:41)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:223)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor$Jsr303ValidatorFactory.run(ConfigurationPropertiesBindingPostProcessor.java:384)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.afterPropertiesSet(ConfigurationPropertiesBindingPostProcessor.java:175)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.ValidationException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 33 more
+2020-09-20 15:49:38.730  INFO DESKTOP-UU2715V
+			---[           main] .b.l.ClasspathLoggingApplicationListener : Application failed to start with classpath: unknown
+2020-09-20 15:49:38.731 ERROR DESKTOP-UU2715V
+			---[           main] o.s.b.SpringApplication                  : Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:687)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:967)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:956)
+	at com.promineotech.inventoryManagement.App.main(App.java:13)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1017)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:800)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:698)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:621)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:579)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:110)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:86)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:41)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:223)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor$Jsr303ValidatorFactory.run(ConfigurationPropertiesBindingPostProcessor.java:384)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.afterPropertiesSet(ConfigurationPropertiesBindingPostProcessor.java:175)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.ValidationException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 33 more
+2020-09-20 15:55:18.315  INFO DESKTOP-UU2715V
+			---[           main] c.p.i.App                                : Starting App on DESKTOP-UU2715V with PID 15320 (started by lblan in C:\Users\lblan\Promineo Assignments\Weekly Assignments\Spring Boot Week 2\inventoryManagement)
+2020-09-20 15:55:18.338  INFO DESKTOP-UU2715V
+			---[           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@70f59913: startup date [Sun Sep 20 15:55:18 CDT 2020]; root of context hierarchy
+2020-09-20 15:55:18.689  INFO DESKTOP-UU2715V
+			---[           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2020-09-20 15:55:19.001  INFO DESKTOP-UU2715V
+			---[           main] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 5.1.3.Final
+2020-09-20 15:55:19.008  WARN DESKTOP-UU2715V
+			---[           main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:687)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:967)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:956)
+	at com.promineotech.inventoryManagement.App.main(App.java:13)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1017)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:800)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:698)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:621)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:579)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:110)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:86)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:41)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:223)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor$Jsr303ValidatorFactory.run(ConfigurationPropertiesBindingPostProcessor.java:384)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.afterPropertiesSet(ConfigurationPropertiesBindingPostProcessor.java:175)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.ValidationException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 33 more
+2020-09-20 15:55:19.010  INFO DESKTOP-UU2715V
+			---[           main] .b.l.ClasspathLoggingApplicationListener : Application failed to start with classpath: unknown
+2020-09-20 15:55:19.010 ERROR DESKTOP-UU2715V
+			---[           main] o.s.b.SpringApplication                  : Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:687)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:967)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:956)
+	at com.promineotech.inventoryManagement.App.main(App.java:13)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1017)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:800)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:698)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:621)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:579)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:110)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:86)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:41)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:223)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor$Jsr303ValidatorFactory.run(ConfigurationPropertiesBindingPostProcessor.java:384)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.afterPropertiesSet(ConfigurationPropertiesBindingPostProcessor.java:175)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.ValidationException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 33 more
+2020-09-20 15:57:41.547  INFO DESKTOP-UU2715V
+            --- [           main] c.p.i.App                                : Starting App on DESKTOP-UU2715V with PID 4716 (started by lblan in C:\Users\lblan\Promineo Assignments\Weekly Assignments\Spring Boot Week 2\inventoryManagement)
+2020-09-20 15:57:41.569  INFO DESKTOP-UU2715V
+            --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@70f59913: startup date [Sun Sep 20 15:57:41 CDT 2020]; root of context hierarchy
+2020-09-20 15:57:41.901  INFO DESKTOP-UU2715V
+            --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2020-09-20 15:57:42.198  INFO DESKTOP-UU2715V
+            --- [           main] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 5.1.3.Final
+2020-09-20 15:57:42.207  WARN DESKTOP-UU2715V
+            --- [           main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:687)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:967)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:956)
+	at com.promineotech.inventoryManagement.App.main(App.java:13)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1017)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:800)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:698)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:621)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:579)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:110)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:86)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:41)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:223)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor$Jsr303ValidatorFactory.run(ConfigurationPropertiesBindingPostProcessor.java:384)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.afterPropertiesSet(ConfigurationPropertiesBindingPostProcessor.java:175)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.ValidationException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 33 more
+2020-09-20 15:57:42.209  INFO DESKTOP-UU2715V
+            --- [           main] .b.l.ClasspathLoggingApplicationListener : Application failed to start with classpath: unknown
+2020-09-20 15:57:42.209 ERROR DESKTOP-UU2715V
+            --- [           main] o.s.b.SpringApplication                  : Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:687)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:967)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:956)
+	at com.promineotech.inventoryManagement.App.main(App.java:13)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1017)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:800)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:698)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:621)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:579)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:110)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:86)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:41)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:223)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor$Jsr303ValidatorFactory.run(ConfigurationPropertiesBindingPostProcessor.java:384)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.afterPropertiesSet(ConfigurationPropertiesBindingPostProcessor.java:175)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.ValidationException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 33 more
+2020-09-20 15:59:42.553  INFO DESKTOP-UU2715V
+            --- [           main] c.p.i.App                                : Starting App on DESKTOP-UU2715V with PID 9300 (started by lblan in C:\Users\lblan\Promineo Assignments\Weekly Assignments\Spring Boot Week 2\inventoryManagement)
+2020-09-20 15:59:42.577  INFO DESKTOP-UU2715V
+            --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5dcd8c7a: startup date [Sun Sep 20 15:59:42 CDT 2020]; root of context hierarchy
+2020-09-20 15:59:42.905  INFO DESKTOP-UU2715V
+            --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2020-09-20 15:59:43.209  INFO DESKTOP-UU2715V
+            --- [           main] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 5.1.3.Final
+2020-09-20 15:59:43.217  WARN DESKTOP-UU2715V
+            --- [           main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:687)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:967)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:956)
+	at com.promineotech.inventoryManagement.App.main(App.java:13)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:110)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:86)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:41)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:223)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor$Jsr303ValidatorFactory.run(ConfigurationPropertiesBindingPostProcessor.java:384)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.afterPropertiesSet(ConfigurationPropertiesBindingPostProcessor.java:175)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.ValidationException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 24 more
+2020-09-20 15:59:43.218  INFO DESKTOP-UU2715V
+            --- [           main] .b.l.ClasspathLoggingApplicationListener : Application failed to start with classpath: unknown
+2020-09-20 15:59:43.218 ERROR DESKTOP-UU2715V
+            --- [           main] o.s.b.SpringApplication                  : Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:687)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:967)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:956)
+	at com.promineotech.inventoryManagement.App.main(App.java:13)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:110)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:86)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:41)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:223)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor$Jsr303ValidatorFactory.run(ConfigurationPropertiesBindingPostProcessor.java:384)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.afterPropertiesSet(ConfigurationPropertiesBindingPostProcessor.java:175)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.ValidationException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 24 more
+2020-09-20 16:01:51.488  INFO DESKTOP-UU2715V
+            --- [           main] c.p.i.App                                : Starting App on DESKTOP-UU2715V with PID 10280 (started by lblan in C:\Users\lblan\Promineo Assignments\Weekly Assignments\Spring Boot Week 2\inventoryManagement)
+2020-09-20 16:01:51.518  INFO DESKTOP-UU2715V
+            --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5dcd8c7a: startup date [Sun Sep 20 16:01:51 CDT 2020]; root of context hierarchy
+2020-09-20 16:01:51.840  INFO DESKTOP-UU2715V
+            --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2020-09-20 16:01:52.179  INFO DESKTOP-UU2715V
+            --- [           main] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 5.1.3.Final
+2020-09-20 16:01:52.188  WARN DESKTOP-UU2715V
+            --- [           main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:687)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:967)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:956)
+	at com.promineotech.inventoryManagement.App.main(App.java:13)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:110)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:86)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:41)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:223)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor$Jsr303ValidatorFactory.run(ConfigurationPropertiesBindingPostProcessor.java:384)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.afterPropertiesSet(ConfigurationPropertiesBindingPostProcessor.java:175)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.ValidationException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 24 more
+2020-09-20 16:01:52.189  INFO DESKTOP-UU2715V
+            --- [           main] .b.l.ClasspathLoggingApplicationListener : Application failed to start with classpath: unknown
+2020-09-20 16:01:52.190 ERROR DESKTOP-UU2715V
+            --- [           main] o.s.b.SpringApplication                  : Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:687)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:967)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:956)
+	at com.promineotech.inventoryManagement.App.main(App.java:13)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:110)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:86)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:41)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:223)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor$Jsr303ValidatorFactory.run(ConfigurationPropertiesBindingPostProcessor.java:384)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.afterPropertiesSet(ConfigurationPropertiesBindingPostProcessor.java:175)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.ValidationException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 24 more
+2020-09-20 16:06:36.020  INFO DESKTOP-UU2715V
+            --- [           main] c.p.i.App                                : Starting App on DESKTOP-UU2715V with PID 2636 (started by lblan in C:\Users\lblan\Promineo Assignments\Weekly Assignments\Spring Boot Week 2\inventoryManagement)
+2020-09-20 16:06:36.042  INFO DESKTOP-UU2715V
+            --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5dcd8c7a: startup date [Sun Sep 20 16:06:36 CDT 2020]; root of context hierarchy
+2020-09-20 16:06:36.365  INFO DESKTOP-UU2715V
+            --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2020-09-20 16:06:36.646  INFO DESKTOP-UU2715V
+            --- [           main] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 5.1.3.Final
+2020-09-20 16:06:36.653  WARN DESKTOP-UU2715V
+            --- [           main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:687)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:967)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:956)
+	at com.promineotech.inventoryManagement.App.main(App.java:13)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1017)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:800)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:698)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:621)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:579)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:110)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:86)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:41)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:223)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor$Jsr303ValidatorFactory.run(ConfigurationPropertiesBindingPostProcessor.java:384)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.afterPropertiesSet(ConfigurationPropertiesBindingPostProcessor.java:175)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.ValidationException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 33 more
+2020-09-20 16:06:36.655  INFO DESKTOP-UU2715V
+            --- [           main] .b.l.ClasspathLoggingApplicationListener : Application failed to start with classpath: unknown
+2020-09-20 16:06:36.655 ERROR DESKTOP-UU2715V
+            --- [           main] o.s.b.SpringApplication                  : Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:687)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:967)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:956)
+	at com.promineotech.inventoryManagement.App.main(App.java:13)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1017)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:800)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:698)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:621)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:579)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:110)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:86)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:41)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:223)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor$Jsr303ValidatorFactory.run(ConfigurationPropertiesBindingPostProcessor.java:384)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.afterPropertiesSet(ConfigurationPropertiesBindingPostProcessor.java:175)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.ValidationException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 33 more
+2020-09-20 16:08:01.461  INFO DESKTOP-UU2715V
+            --- [           main] c.p.i.App                                : Starting App on DESKTOP-UU2715V with PID 14352 (started by lblan in C:\Users\lblan\Promineo Assignments\Weekly Assignments\Spring Boot Week 2\inventoryManagement)
+2020-09-20 16:08:01.496  INFO DESKTOP-UU2715V
+            --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5dcd8c7a: startup date [Sun Sep 20 16:08:01 CDT 2020]; root of context hierarchy
+2020-09-20 16:08:01.806  INFO DESKTOP-UU2715V
+            --- [           main] c.p.i.App                                : Starting App on DESKTOP-UU2715V with PID 16852 (started by lblan in C:\Users\lblan\Promineo Assignments\Weekly Assignments\Spring Boot Week 2\inventoryManagement)
+2020-09-20 16:08:01.842  INFO DESKTOP-UU2715V
+            --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5dcd8c7a: startup date [Sun Sep 20 16:08:01 CDT 2020]; root of context hierarchy
+2020-09-20 16:08:01.885  INFO DESKTOP-UU2715V
+            --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2020-09-20 16:08:02.380  INFO DESKTOP-UU2715V
+            --- [           main] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 5.1.3.Final
+2020-09-20 16:08:02.392  WARN DESKTOP-UU2715V
+            --- [           main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:687)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:967)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:956)
+	at com.promineotech.inventoryManagement.App.main(App.java:13)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:110)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:86)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:41)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:223)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor$Jsr303ValidatorFactory.run(ConfigurationPropertiesBindingPostProcessor.java:384)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.afterPropertiesSet(ConfigurationPropertiesBindingPostProcessor.java:175)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.ValidationException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 24 more
+2020-09-20 16:08:02.395  INFO DESKTOP-UU2715V
+            --- [           main] .b.l.ClasspathLoggingApplicationListener : Application failed to start with classpath: unknown
+2020-09-20 16:08:02.395 ERROR DESKTOP-UU2715V
+            --- [           main] o.s.b.SpringApplication                  : Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:687)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:967)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:956)
+	at com.promineotech.inventoryManagement.App.main(App.java:13)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:110)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:86)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:41)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:223)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor$Jsr303ValidatorFactory.run(ConfigurationPropertiesBindingPostProcessor.java:384)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.afterPropertiesSet(ConfigurationPropertiesBindingPostProcessor.java:175)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.ValidationException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 24 more
+2020-09-20 16:08:02.401  INFO DESKTOP-UU2715V
+            --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2020-09-20 16:08:02.755  INFO DESKTOP-UU2715V
+            --- [           main] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 5.1.3.Final
+2020-09-20 16:08:02.763  WARN DESKTOP-UU2715V
+            --- [           main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:687)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:967)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:956)
+	at com.promineotech.inventoryManagement.App.main(App.java:13)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1017)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:800)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:698)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:621)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:579)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:110)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:86)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:41)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:223)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor$Jsr303ValidatorFactory.run(ConfigurationPropertiesBindingPostProcessor.java:384)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.afterPropertiesSet(ConfigurationPropertiesBindingPostProcessor.java:175)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.ValidationException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 33 more
+2020-09-20 16:08:02.766  INFO DESKTOP-UU2715V
+            --- [           main] .b.l.ClasspathLoggingApplicationListener : Application failed to start with classpath: unknown
+2020-09-20 16:08:02.766 ERROR DESKTOP-UU2715V
+            --- [           main] o.s.b.SpringApplication                  : Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:687)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:967)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:956)
+	at com.promineotech.inventoryManagement.App.main(App.java:13)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/ValidationException
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1017)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:800)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:698)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:621)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:579)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:110)
+	at org.hibernate.validator.internal.engine.ConfigurationImpl.<init>(ConfigurationImpl.java:86)
+	at org.hibernate.validator.HibernateValidator.createGenericConfiguration(HibernateValidator.java:41)
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:276)
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:223)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor$Jsr303ValidatorFactory.run(ConfigurationPropertiesBindingPostProcessor.java:384)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.afterPropertiesSet(ConfigurationPropertiesBindingPostProcessor.java:175)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.ValidationException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 33 more
+2020-09-20 16:12:50.184  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] c.p.i.App                                : Starting App on DESKTOP-UU2715V with PID 17844 (started by lblan in C:\Users\lblan\Promineo Assignments\Weekly Assignments\Spring Boot Week 2\inventoryManagement)
+2020-09-20 16:12:50.206  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@45364bed: startup date [Sun Sep 20 16:12:50 CDT 2020]; root of context hierarchy
+2020-09-20 16:12:50.588  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2020-09-20 16:12:50.859  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 5.1.3.Final
+2020-09-20 16:12:50.964  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e875247] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-20 16:12:50.981  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionAttributeSource' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-20 16:12:50.988  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionInterceptor' of type [class org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-20 16:12:50.991  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-20 16:12:51.233  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2020-09-20 16:12:51.426  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] o.a.c.c.StandardService                  : Starting service Tomcat
+2020-09-20 16:12:51.428  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.0.26
+2020-09-20 16:12:51.482  INFO DESKTOP-UU2715V
+            --- [ost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2020-09-20 16:12:51.484  INFO DESKTOP-UU2715V
+            --- [ost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1280 ms
+2020-09-20 16:12:51.839  INFO DESKTOP-UU2715V
+            --- [ost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2020-09-20 16:12:51.843  INFO DESKTOP-UU2715V
+            --- [ost-startStop-1] o.s.b.c.e.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-09-20 16:12:51.844  INFO DESKTOP-UU2715V
+            --- [ost-startStop-1] o.s.b.c.e.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-09-20 16:12:51.981  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-09-20 16:12:51.990  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-09-20 16:12:52.040  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] o.h.Version                              : HHH000412: Hibernate Core {4.3.11.Final}
+2020-09-20 16:12:52.044  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2020-09-20 16:12:52.046  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] o.h.c.Environment                        : HHH000021: Bytecode provider name : javassist
+2020-09-20 16:12:52.144  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2020-09-20 16:12:52.757  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-20 16:12:52.863  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] o.h.h.i.a.ASTQueryTranslatorFactory      : HHH000397: Using ASTQueryTranslatorFactory
+2020-09-20 16:12:53.088  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] o.h.t.h.SchemaExport                     : HHH000227: Running hbm2ddl schema export
+2020-09-20 16:12:53.105 ERROR DESKTOP-UU2715V
+            --- [ment.App.main()] o.h.t.h.SchemaExport                     : HHH000389: Unsuccessful: alter table `order` drop foreign key FK_m6q2ofkj1g5aobtb2p00ajpqg
+2020-09-20 16:12:53.105 ERROR DESKTOP-UU2715V
+            --- [ment.App.main()] o.h.t.h.SchemaExport                     : Table 'inventorymanagementdb.order' doesn't exist
+2020-09-20 16:12:53.111 ERROR DESKTOP-UU2715V
+            --- [ment.App.main()] o.h.t.h.SchemaExport                     : HHH000389: Unsuccessful: alter table `product_order` drop foreign key FK_5uw5nxqovigv7mf1gmbos1rl8
+2020-09-20 16:12:53.112 ERROR DESKTOP-UU2715V
+            --- [ment.App.main()] o.h.t.h.SchemaExport                     : Table 'inventorymanagementdb.product_order' doesn't exist
+2020-09-20 16:12:53.114 ERROR DESKTOP-UU2715V
+            --- [ment.App.main()] o.h.t.h.SchemaExport                     : HHH000389: Unsuccessful: alter table `product_order` drop foreign key FK_sf5yp37b7qt63qqoq25f82lpu
+2020-09-20 16:12:53.115 ERROR DESKTOP-UU2715V
+            --- [ment.App.main()] o.h.t.h.SchemaExport                     : Table 'inventorymanagementdb.product_order' doesn't exist
+2020-09-20 16:12:53.868  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] o.h.t.h.SchemaExport                     : HHH000230: Schema export complete
+2020-09-20 16:12:54.311  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@45364bed: startup date [Sun Sep 20 16:12:50 CDT 2020]; root of context hierarchy
+2020-09-20 16:12:54.357  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customers],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.promineotech.inventoryManagement.controller.CustomerController.getCustomer()
+2020-09-20 16:12:54.359  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customers/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.promineotech.inventoryManagement.controller.CustomerController.getCustomer(java.lang.Long)
+2020-09-20 16:12:54.360  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customers],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.promineotech.inventoryManagement.controller.CustomerController.createCustomer(com.promineotech.inventoryManagement.entity.Customer)
+2020-09-20 16:12:54.361  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customers/{id}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.promineotech.inventoryManagement.controller.CustomerController.updateCustomer(com.promineotech.inventoryManagement.entity.Customer,java.lang.Long)
+2020-09-20 16:12:54.362  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customers/{id}/orders],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.promineotech.inventoryManagement.controller.OrderController.createCustomer(java.util.Set<java.lang.Long>,java.lang.Long)
+2020-09-20 16:12:54.362  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customers/{id}/orders/{orderId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.promineotech.inventoryManagement.controller.OrderController.updateOrder(com.promineotech.inventoryManagement.entity.Order,java.lang.Long)
+2020-09-20 16:12:54.363  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/products/{id}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.promineotech.inventoryManagement.controller.ProductController.createProduct(com.promineotech.inventoryManagement.entity.Product,java.lang.Long)
+2020-09-20 16:12:54.364  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/products],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.promineotech.inventoryManagement.controller.ProductController.createdProduct(com.promineotech.inventoryManagement.entity.Product)
+2020-09-20 16:12:54.365  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/products/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.promineotech.inventoryManagement.controller.ProductController.deleteProduct(java.lang.Long)
+2020-09-20 16:12:54.371  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/products],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.promineotech.inventoryManagement.controller.ProductController.getProducts()
+2020-09-20 16:12:54.373  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-09-20 16:12:54.373  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2020-09-20 16:12:54.391  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-09-20 16:12:54.392  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-09-20 16:12:54.419  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-09-20 16:12:54.516  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-09-20 16:12:54.539  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2020-09-20 16:12:54.545  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2020-09-20 16:12:54.554  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] o.a.t.u.n.NioSelectorPool                : Using a shared selector for servlet write/read
+2020-09-20 16:12:54.567  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2020-09-20 16:12:54.569  INFO DESKTOP-UU2715V
+            --- [ment.App.main()] c.p.i.App                                : Started App in 4.525 seconds (JVM running for 6.835)
+2020-09-20 16:19:04.457  INFO DESKTOP-UU2715V
+            --- [nio-8080-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-09-20 16:19:04.457  INFO DESKTOP-UU2715V
+            --- [nio-8080-exec-2] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization started
+2020-09-20 16:19:04.473  INFO DESKTOP-UU2715V
+            --- [nio-8080-exec-2] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
